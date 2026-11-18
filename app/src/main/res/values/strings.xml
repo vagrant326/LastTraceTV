@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">The Last Trace</string>
+    <string name="status_opening">Opening the case file…</string>
+    <string name="status_retrying">The server is not answering. Trying again in a few seconds.</string>
+</resources>

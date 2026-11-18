@@ -1,0 +1,38 @@
+name: Release
+
+# A push to main is a production release. There is no separate tagging step, and nothing lands
+# on main that is not meant to ship - which in practice means a pull request from develop.
+#
+# Production owns the minor, and raises it on every release: a release is a batch of dev builds
+# that proved themselves, which is exactly the unit a minor is for here. Major is for a change
+# that costs the user their motor memory, and that one is dispatched by hand.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Which part of the version to raise'
+        required: true
+        default: minor
+        type: choice
+        options: [minor, major]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-prod
+  cancel-in-progress: false
+
+jobs:
+  release:
+    uses: ./.github/workflows/release-common.yml
+    secrets: inherit
+    with:
+      channel: prod
+      tag-prefix: v
+      flavour: Prod
+      asset: LastTraceTV.apk
+      alias: latest
+      bump: ${{ github.event.inputs.bump || 'minor' }}

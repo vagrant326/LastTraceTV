@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Taken from the game's own QR palette, so the wrapper and the page read as one thing. -->
+    <color name="paper_dark">#181714</color>
+    <color name="paper_light">#ECE6D3</color>
+    <color name="accent">#B89A5A</color>
+    <!-- The host screen's own background (.display-mode), so the safe-area margin reads as part of it. -->
+    <color name="stage">#070907</color>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Amber marks the dev channel, as in the keyboards; the icon geometry stays the same. -->
+    <color name="accent">#FFC44D</color>
+</resources>

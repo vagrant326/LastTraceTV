@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status_opening">Otwieram akta…</string>
+    <string name="status_retrying">Serwer nie odpowiada. Próbuję ponownie za kilka sekund.</string>
+</resources>
